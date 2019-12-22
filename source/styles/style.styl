@@ -1,0 +1,1425 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap')
+
+// Stylus vars
+$printres = 820px
+$smalltablet = 560px
+$mobile = 500px
+
+// Global
+*
+    box-sizing: border-box
+    border-collapse: collapse
+    ::selection
+        background: #ff44556e
+
+body
+    font-smooth: none
+    -webkit-font-smoothing: none
+    font-family: 'Arial', sans-serif
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.lightbox
+	display: none
+	z-index: 9999
+	padding: 60px
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background: rgba(0,0,0,0.4)
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		height: 86%
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.dead-ui-label
+	position: absolute
+	z-index: 100
+	width: 220px
+	height: 120px
+	background-image: url(https://cdn.glitch.com/78a63c0e-9d0d-41d5-84ad-1c4a47e813e0%2Fdead-ui-label.png?v=1576369960945)
+	background-size: cover
+	transform: rotate(15deg)
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.main-slide
+    cursor: url('/img/bluecursor.png'), auto
+    height: 100vh
+    background-color: rgba(0,0,0,1)
+    background-image: url(/img/fondetoiles.gif)
+    &__wrap
+        position relative
+        max-width: 1100px
+        margin: 0 auto
+        height: 100%
+        .baby
+            position: absolute
+            height: 200px
+            top: 50%
+            left: -10%
+            transform: translateY(-50%)
+        .head-sign
+            position: absolute
+            height: 110px
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+    &__center-gif
+        width: 550px
+        height: 400px
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        .centr-img
+            position: absolute
+            &.earth
+                left: 120px
+                top: 0
+                width: 300px
+            &.title
+                width: 550px
+                left: 0px
+                top: 70px
+            &.girl
+                left: 197px
+                top: -57px
+                z-index: 2
+            &.dragon
+                top: -90px
+                left: 219px
+                width: 100px
+            &.torch-left
+                top: -80px
+                left: 40px
+            &.torch-right
+                top: -80px
+                right: 40px
+    &__btm-gif
+        position: absolute
+        left: 50%
+        bottom: 40px
+        transform: translateX(-50%)
+        display: flex
+        .caption
+            border: 2px solid red
+        .finger
+            flex: 1
+            width: 100px
+            height: 40px
+            transform: rotate(270deg)
+            margin-top: 20px
+
+
+.intro-slide
+    height: 700px
+    background: #333
+    position relative
+    overflow: hidden
+    background-image: url(/img/animated_background_large.gif)
+    cursor: url('/img/cursor2.png'), auto
+    &__text
+        position: absolute
+        left: 50%
+        margin: 0 auto
+        transform: translateX(-50%) perspective(100px) rotateX(14deg) scaleX(1.5)
+        width: 600px
+        p
+            margin: 0
+            // margin-top: 200px
+            color: yellow
+            font-size: 26px
+            line-height: 160%
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.guestbook
+    background-image: url(/img/paper-text.jpg)
+    cursor: url('/img/cursor3.png'), auto
+    &__img
+        margin-bottom: 20px
+    &__wrap
+        padding: 60px 40px 40px
+        margin: 0 auto
+        height: 600px
+        max-width: 740px
+        h1
+            font-family: serif
+        p
+            font-size: 18px
+            line-height: 1.6
+
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.screens
+    width: 100%
+    background: linear-gradient(to bottom, #6AC1FF 0%,#0063D7 100%)
+    cursor: url('/img/cursor4.png'), auto
+    &__wrap
+        // background: rgba(0,0,0,0.04)
+        display: flex
+        flex-direction: column
+        margin: 0 auto
+        padding: 28px 40px 64px
+        max-width: 700px
+    h1
+        text-align: center
+        margin-bottom: 40px
+    &__monitors
+        // background: rgba(0,0,0,0.04)
+        position: relative
+        width: 100%
+        height: 360px
+        margin-bottom: 28px
+            
+    &__slider
+        position: relative
+        display: flex
+        justify-content: space-between
+        &__item
+            z-index: 2
+            display: flex
+            flex-direction: column
+            align-items: center
+            &__date
+                position: relative
+                font-family: arial, sans-serif
+                font-weight: bold
+                font-size: 20px
+                background: linear-gradient(180deg, #F5F5F5 0%, #A6A6A6 100%)
+                border-radius: 10px
+                padding: 8px 10px
+                margin-bottom: 16px
+                &:before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: calc(100% + 6px)
+                    height: calc(100% + 6px)
+                    top: -3px
+                    left: -3px
+                    z-index: -1
+                    margin: -$border
+                    border-radius: 12px
+                    background: linear-gradient(180deg, #616161 0%, #222 100%)
+            &__btn
+                cursor: pointer
+                position: relative
+                width: 36px
+                height: 36px
+                background: linear-gradient(0deg, #F5F5F5 0%, #A6A6A6 100%)
+                border-radius: 100px
+                &:hover
+                    background: linear-gradient(180deg, #D3D3D3 0%, #8E8E8E 100%)
+                &:before
+                    content: ''
+                    display: block
+                    position: absolute
+                    background: linear-gradient(180deg, #FF2626 0%, #A02E2E 100%)
+                    width: 18px
+                    height: 18px
+                    border-radius: 20px
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%,-50%) scale(0.5)
+                    opacity: 0
+                &_active
+                    &:before
+                        transform: translate(-50%,-50%) scale(1)
+                        opacity: 1
+        &__timeline
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            width: 86%
+            height: 12px
+            bottom: 12px
+            background: linear-gradient(to bottom, #000 0%,#616161 100%)
+
+$monitor-transition = all 0.2s ease
+            
+.screen
+    &-wrap
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 400px
+        height: 260px
+        transition: $monitor-transition
+    &-shadow
+        z-index: 1
+        position: absolute
+        width: 320px
+        height: 60px
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -30px
+        background-size: 100% 100%
+        background-image: url(https://cdn.glitch.com/78a63c0e-9d0d-41d5-84ad-1c4a47e813e0%2Fgradient-rad.png)
+        transition: $monitor-transition
+    &-body
+        z-index: 20
+        position: absolute
+        bottom: 0
+        left: 100px
+        width: 200px
+        height: 220px
+        background: linear-gradient(180deg, #FFFFFF 0%, #E0E0E0 100%)
+        border-radius: 6px
+        transition: $monitor-transition
+    &-base
+        z-index: 3
+        position: absolute
+        background: linear-gradient(360deg, #969696 -86.11%, #E0E0E0 100%)
+        border-radius: 20px 20px 0 0
+        width: 159px
+        height: 18px
+        left: 121px
+        bottom: 20px
+        transition: $monitor-transition
+    &-stand
+        z-index: 2
+        position: absolute
+        background: linear-gradient(180deg, #969696 0%, #E0E0E0 192.31%)
+        width: 120px
+        height: 18px
+        left: 140px
+        bottom: 18px
+        transform: perspective( 60px ) rotateX( 45deg ) scaleX(0.8) scaleY(1.4)
+        transition: $monitor-transition
+    &-point1
+        position: absolute
+        width: 14px
+        height: 14px
+        left: 25px
+        bottom: 30px
+        background: #17191C
+        border-radius: 20px
+        transition: $monitor-transition
+    &-point2
+        position: absolute
+        width: 70px
+        height: 8px
+        left: 50px
+        bottom: 33px
+        background: #17191C
+        transition: $monitor-transition
+    &-monitor
+        position: absolute
+        height: 130px
+        width: 150px
+        left: 25px
+        top: 25px
+        border-radius: 20px
+        background: linear-gradient(180deg, #8D9990 0%, #354238 100%)
+        transition: $monitor-transition
+    &-flare
+        position: absolute
+        height: 26px
+        width: 26px
+        left: 16px
+        top: 16px
+        border-radius: 12px 0
+        border-left: 6px solid white
+        border-top: 6px solid white
+        transition: $monitor-transition
+    &-sizeinfo
+        position: absolute
+        top: -80px
+        left: 50%
+        transform: translateX(-50%)
+        background: #1A1A1A
+        padding: 10px 12px
+        border-radius: 8px
+        margin-bottom: 20px
+        transition: $monitor-transition
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            left: 50%
+            bottom: -18px
+            transform: translateX(-50%)
+            width: 0
+            height: 0
+            border-left: 20px solid transparent
+            border-right: 20px solid transparent
+            border-top: 20px solid #1A1A1A
+        span
+            font-family: arial, sans-serif
+            font-weight: bold
+            color: white
+            font-size: 22px
+    
+.m-2002-active
+    .screen
+        &-body
+            width: 275px
+            height: 206px
+            left: 63px
+            bottom: 34px
+            border-radius: 2px
+        &-monitor
+            width: 222px
+            height: 137px
+            border-radius: 10px
+            background-image: linear-gradient(180deg, #8D8D8D 0%, #000000 100%)
+        &-base
+            bottom: 0
+        &-point1
+            bottom: 18px
+        &-point2
+            bottom: 20px
+            width: 8px
+            height: 8px
+            border-radius: 20px
+            background: #16B468
+        &-flare
+            border-radius: 8px 0
+            width: 30px
+            height: 30px
+        &-shadow
+            height: 40px
+            width: 380px
+            bottom: -20px
+            
+.m-2007-active
+    .screen
+        &-body
+            width: 306px
+            height: 206px
+            left: 47px
+            top: 23px
+            background: linear-gradient(180deg, #BEBEBE 0%, #757575 100%)
+        &-monitor
+            width: 270px
+            height: 157px
+            left: 18px
+            top: 18px
+            border-radius: 4px
+            background: linear-gradient(86.01deg, #373737 -2.22%, #000000 85.05%)
+        &-point1
+            bottom: 10px
+            left: 15px
+            transform: scale(0.5)
+            background: #16B468
+        &-point2
+            bottom: 14px
+            height: 4px
+            width: 4px
+            left: 35px
+            opacity: 0.2
+        &-flare
+            border-radius: 8px 0
+            width: 3px
+            height: 3px
+            opacity: 0
+        &-base
+            bottom: 0
+            border-radius: 0
+            height: 10px
+            background: linear-gradient(360deg, #3E3E3E -86.11%, #6A6A6A 100%)
+        &-stand
+            transform: perspective( 0 ) rotateX( 0deg ) scaleX(1) scaleY(1)
+            bottom: 10px
+            left: 158px
+            height: 26px
+            width: 80px
+            background: linear-gradient(180deg, #424242 0%, #4E4E4E 192.31%)
+        &-shadow
+            height: 20px
+            width: 330px
+            bottom: -10px
+
+.m-2015-active
+    .screen
+        &-body
+            width: 380px
+            height: 220px
+            left: 10px
+            top: 8px
+            border-radius: 2px
+            background: linear-gradient(178deg, #474747 17.08%, #535353 96.98%)
+        &-monitor
+            width: 364px
+            height: 194px
+            left: 8px
+            top: 10px
+            border-radius: 2px
+            background: linear-gradient(86.01deg, #373737 -2.22%, #000000 85.05%)
+        &-base
+            bottom: 0
+            border-radius: 0
+            height: 8px
+            background: linear-gradient(360deg, #3E3E3E -86.11%, #434343 100%)
+        &-point1
+            bottom: 2px
+            left: 4px
+            transform: scale(0.3)
+            background: #16B468
+        &-point2
+            bottom: 6px
+            height: 4px
+            width: 4px
+            left: 18px
+            opacity: 0
+        &-flare
+            border-radius: 8px 0
+            width: 3px
+            height: 3px
+            opacity: 0
+        &-stand
+            transform: perspective( 0 ) rotateX( 0deg ) scaleX(1) scaleY(1)
+            bottom: 6px
+            left: 186px
+            height: 30px
+            width: 24px
+            background: linear-gradient(180deg, #212121 0%, #4E4E4E 192.31%)
+        &-shadow
+            height: 18px
+            width: 400px
+            bottom: -10px
+
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.fs
+	cursor: url('/img/cursor5.png'), auto
+	background: #191a1b
+	width: 100%
+	padding: 50px 40px 60px
+	background-image: url(https://cdn.glitch.com/78a63c0e-9d0d-41d5-84ad-1c4a47e813e0%2Fpattern.gif)
+	background-size: 100px
+	&__hr
+		margin: 40px 0
+		border: none
+		border-top: 2px dotted rgba(255,255,255,0.4)
+	&__wrap
+		margin: 0 auto
+		max-width: 700px
+		color: white
+		a
+			color: #f45
+		p
+			line-height: 1.5
+	&__img-h1
+		width: 100%
+		max-width: 600px
+	&__img-h2
+		width: 100%
+		max-width: 400px
+	&__block-link
+		display: inline-block
+		margin-bottom: 20px
+		&:hover
+			border: 2px solid #f45
+		img
+			width: 100%
+			max-width: 400px
+
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.tb-l
+    cursor: url('/img/cursor6.png'), auto
+    &__wrap
+        padding: 20px
+    &__tag-line
+        background: #FBE69C
+    &__content
+        padding: 30px !important
+    &__menu
+        ul
+            list-style-type: none
+            padding: 0
+            li
+                margin-bottom: 16px
+                a
+                    color: white
+                    text-decoration: none
+                    &:hover
+                        text-decoration: underline
+    &__btn
+        cursor: pointer
+        width: 200px
+        padding: 10px
+        margin-top: 10px
+        margin-bottom: 40px
+        border-radius: 10px
+        background: linear-gradient(0deg, rgba(8,0,143,1) 0%, rgba(0,160,240,1) 100%)
+        color: white
+        &:hover
+            background: linear-gradient(0deg, rgba(13,1,217,1) 0%, rgba(0,208,240,1) 100%)
+            box-shadow: 0 0 10px 2px rgba(46,202,230,1)
+    &__left
+        width: 20%
+        background: #940000
+    &__preview
+        max-width: 700px
+        width: 100%
+        border: 2px solid gray
+    &__table
+        width: 100%
+        &_logo
+            height: 80px
+        th
+            border-collapse: collapse
+            margin: 2px
+            vertical-align: top
+            padding: 10px
+            // background: white
+            p
+                margin: 0 auto
+                line-height: 1.4
+                font-weight: normal
+                max-width: 600px
+                margin-bottom: 20px
+    &-borders
+        // background: #E2E2E2
+        border-collapse: separate
+        th
+            border: 1px solid silver
+            border-right: 1px solid #888
+            border-bottom: 1px solid #888
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.sm {
+	cursor: url('/img/cursor7.png'), auto
+	position: relative
+	width: 100%
+	background: linear-gradient(180deg, #A93AA4 0%, #60268D 100%)
+	&:after {
+		content: ""
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: block
+		position: absolute
+		background: repeating-linear-gradient(
+			45deg,
+			transparent,
+			transparent 20px,
+			rgba(0,0,0,0.1) 20px,
+			rgba(0,0,0,0.1) 40px
+		);
+		z-index: 0
+	}
+	&-tagscloud {
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		img {
+			width: 50%
+			@media screen and (max-width: 600px) {
+				width: 100%
+			}
+		}
+	}
+	&-btnbox {
+		margin-bottom: 40px
+		display: flex
+		&__btn {
+			cursor: pointer
+			background: linear-gradient(180deg, #DF70EA 0%, #9E2EAD 100%)
+			border: 1px solid #652470
+			color: white
+			padding: 14px 20px
+			transition: all 0.2s ease
+			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+			&:hover, &:focus {
+				outline: none
+				background: linear-gradient(180deg, #CA51D6 0%, #81278D 100%)
+			}
+			&:first-child {
+				margin-right: -1px
+				border-radius: 16px 0 0 16px
+			}
+			&:last-child {
+				margin-left: -1px
+				border-radius: 0 16px 16px 0
+			}
+			&_active {
+				background: linear-gradient(180deg, #551D5C 0.01%, #85308D 100%);
+				&:hover, &:focus {
+					outline: none
+					background: linear-gradient(180deg, #63226C 0.01%, #973A9F 100%)
+				}
+			}
+		}
+	}
+	&-stickers {
+		img {
+			width: 100%
+		}
+	}
+	&-box {
+		padding: 36px 40px
+		width: 100%
+		background: white
+		border-radius: 20px
+		box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4)
+		&-itemhide {
+			display: none !important
+		}
+		&__btns {
+			color: black
+			display: flex
+			flex-wrap: wrap
+		}
+		&__btn1 {
+			margin: 0 20px 20px 0
+			cursor: pointer
+			display: flex
+			align-items: center
+			font-family: Arial, sans-serif
+			color: white
+			font-size: 20px
+			font-weight: bold
+			padding: 12px 12px 16px
+			position: relative
+			min-width: 240px
+			height: 58px
+			border-radius: 6px
+			border: none
+			background: linear-gradient(180deg, #73C4FF 0%, #087ED3 100%)
+			span {
+				width: 100%
+				text-align: center
+			}
+			&_arrow {
+				position: absolute
+				right: 16px
+				width: 12px
+			}
+			&:hover {
+				background: linear-gradient(180deg, #46B1FF 0%, #0066B0 100%)
+			}
+		}
+		&__btn2 {
+			cursor: pointer
+			margin: 0 20px 20px 0
+			height: 52px
+			font-family: Arial, sans-serif
+			color: white
+			font-size: 20px
+			font-weight: bold
+			border-radius: 6px
+			border: 0
+			padding: 10px 20px
+			min-width: 200px
+			background: linear-gradient(180deg, #FFD873 0%, #FFB580 31.03%, #DD6C1B 49.14%, #E97E19 75.52%, #FFA96B 100%)
+			&:hover {
+				background: linear-gradient(180deg, #FFCB46 0%, #EF9D62 31.03%, #CF6224 49.14%, #D27013 75.52%, #EF8F4A 100%)
+			}
+		}
+		&__btn3 {
+			cursor: pointer
+			margin: 0 20px 20px 0
+			border: 0
+			font-family: Arial, sans-serif
+			color: white
+			font-size: 18px
+			font-weight: bold
+			padding: 10px 30px
+			border-radius: 16px
+			background: linear-gradient(180deg, #989898 0%, #373737 100%)
+			height: 60px
+			&:hover {
+				background: linear-gradient(180deg, #6C6C6C 0%, #252525 100%)
+			}
+		}
+		&__btn4 {
+			cursor: pointer
+			position: relative
+			margin: 0 20px 20px 0
+			border-radius: 100px
+			height: 58px
+			background: linear-gradient(180deg, #A153EE 0%, #D781FF 100%)
+			border: 0
+			font-family: Arial, sans-serif
+			color: white
+			font-size: 20px
+			font-weight: bold
+			min-width: 240px
+			&:after {
+				content: ""
+				width: 90%
+				height: 24px
+				display: block
+				position: absolute
+				background: linear-gradient(180deg, #FFFFFF -70.83%, rgba(255, 255, 255, 0) 100%)
+				border-radius: 20px
+				top: 8px
+				left: 50%
+				transform: translateX(-50%)
+			}
+			&:hover {
+				background: linear-gradient(180deg, #8331D6 0%, #D971EA 100%)
+			}
+		}
+		&__btn5 {
+			cursor: pointer
+			margin: 0 8px 20px 0
+			position: relative
+			width: 58px
+			height: 58px
+			background: linear-gradient(180deg, #BCFF78 0%, #31CB5C 100%)
+			border-radius: 100px
+			border: 4px solid #52C85A
+			img {
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-58%, -44%)
+				width: 26px
+			}
+			&:hover {
+				background: linear-gradient(180deg, #A2EF55 0%, #1CAA43 100%)
+			}
+		}
+		&__btn6 {
+			margin: 0 8px 20px 0
+			cursor: pointer
+			position: relative
+			width: 58px
+			height: 58px
+			background: linear-gradient(180deg, #78DFFF 0%, #3165CB 100%)
+			border-radius: 100px
+			border: 4px solid #3E8EE5
+			img {
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-42%, -44%)
+				width: 26px
+			}
+			&:hover {
+				background: linear-gradient(180deg, #36CBFA 0%, #1A52C0 100%)
+			}
+		}
+		&__btn7 {
+			cursor: pointer
+			position: relative
+			border: 0
+			margin: 0 20px 20px 0
+			border-radius: 6px
+			height: 58px
+			background: linear-gradient(0deg, #EE5353 4.31%, #FF8181 100%)
+			font-family: Arial, sans-serif
+			color: white
+			font-size: 20px
+			font-weight: bold
+			min-width: 240px
+			&:after {
+				content: ""
+				width: 94%
+				height: 24px
+				display: block
+				position: absolute
+				background: linear-gradient(180deg, #FFFFFF -70.83%, rgba(255, 255, 255, 0) 100%)
+				border-radius: 6px
+				top: 8px
+				left: 50%
+				transform: translateX(-50%)
+			}
+			&:hover {
+				background: linear-gradient(0deg, #DB3737 4.31%, #FF6A6A 100%)
+			}
+		}
+		&__btn8 {
+			cursor: pointer
+			font-family: Arial, sans-serif
+			color: white
+			font-size: 20px
+			font-weight: bold
+			min-width: 240px
+			margin: 0 20px 20px 0
+			position: relative
+			height: 58px
+			background: linear-gradient(180deg, #537EEF 0%, #809BFF 47.4%, #2544DE 49.48%, #3B59F4 100%)
+			border-radius: 100px
+			border: 0
+			&:hover {
+				background: linear-gradient(180deg, #346CFB 0%, #7592FF 47.4%, #2544DE 49.48%, #92A3FF 100%)
+			}
+		}
+		&__btn9 {
+			cursor: pointer
+			height: 68px
+			width: 68px
+			border-radius: 100px
+			margin: 0 8px 20px 0
+			position: relative
+			background: radial-gradient(93.56% 71.21% at 50% 28.79%, #FFD337 0%, #F47112 100%)
+			border: 0
+			img {
+				z-index: 99
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%,-50%)
+				width: 28px
+			}
+			&:after {
+				content: ""
+				width: 46px
+				height: 40px
+				display: block
+				position: absolute
+				background: linear-gradient(180deg, #FFFFFF -70.83%, rgba(255, 255, 255, 0) 100%)
+				border-radius: 100px
+				top: 8px
+				left: 50%
+				transform: translateX(-50%)
+			}
+			&:hover {
+				background: radial-gradient(93.56% 71.21% at 50% 28.79%, #FFCD1D 0%, #E63E0A 100%)
+			}
+		}
+		&__btn10 {
+			cursor: pointer
+			margin: 0 20px 20px 0
+			height: 52px
+			font-family: Arial, sans-serif
+			color: white
+			font-size: 20px
+			font-weight: bold
+			border-radius: 6px
+			border: 0
+			padding: 10px 20px
+			min-width: 200px
+			background: linear-gradient(179.01deg, #FFD76F 2.73%, #E3800A 95.43%)
+			&:hover {
+				background: linear-gradient(179.01deg, #FBC743 2.73%, #CD740B 95.43%)
+			}
+		}
+		&__btn11 {
+			cursor: pointer
+			height: 68px
+			width: 68px
+			border-radius: 18px
+			margin: 0 8px 20px 0
+			position: relative
+			background: linear-gradient(180deg, #80E0FF 0%, #2684DC 47.4%, #8CC1FF 100%)
+			border: 2px solid #2B87D5
+			img {
+				width: 28px
+			}
+			&:hover {
+				background: linear-gradient(180deg, #4FD5FF 0%, #096FCD 47.4%, #88D4FF 100%)
+			}
+		}
+	}
+	&-wrap {
+		padding: 40px 40px 60px
+		margin: 0 auto
+		max-width: 800px
+		min-height: 700px
+		position: relative
+		z-index: 9999
+		&__header {
+			background: linear-gradient(180deg, #FFFFFF 0%, #FFF973 100%)
+			background-clip: text
+			-webkit-text-fill-color: transparent
+			font-family: 'Open Sans', sans-serif
+			font-size: 62px
+			color: white
+			margin: 0
+		}
+		&__text {
+			max-width: 620px
+			font-size: 18px
+			color: white
+			line-height: 1.5
+			margin-bottom: 30px
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.fl
+	cursor: url('/img/cursor8.png'), auto
+	overflow: hidden
+	width: 100%
+	min-height: 900px
+	background: #151515
+	font-family: 'Roboto Mono', monospace
+	&__wrap
+		max-width: 1020px
+		margin: 0 auto
+		padding: 80px 60px 100px
+		@media only screen and (max-width: 600px)
+			padding: 50px 30px 80px
+	&__logo
+		display: block
+		position: relative
+		max-width: 486px
+		margin-bottom: 60px
+		&-glitch
+			z-index: 99
+			opacity: 0
+			left: -160px
+			top: -80px
+			position: absolute
+			// max-width: 600px
+			width: 160%
+			height: 240%
+			background-size: cover
+			background-position: center
+		&-normal
+			width: 100%
+			max-width: 486px
+			background-size: cover
+	
+	&__refs
+		position: relative
+		&:after
+			position: absolute
+			top: -40px
+			content: ""
+			display: block
+			width: 70px
+			height: 2px
+			background: white
+		&__links
+			column-count: 2
+			column-gap: 40px
+			@media only screen and (max-width: 600px)
+				column-count: 1
+		&__title
+			color: white
+			margin-bottom: 28px
+		&__link
+			line-height: 1.5
+			margin-bottom: 20px
+			font-size: 20px
+			color: #f45
+			display: block
+			&:hover
+				text-decoration: none
+	
+	&__text
+		width: 100%
+		color: white
+		column-count: 2
+		column-gap: 40px
+		padding-bottom: 80px
+		@media only screen and (max-width: 600px)
+			column-count: 1
+		p
+			margin-top: 0
+			line-height: 1.7
+			font-size: 15px
+			
+	&__history
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		width: 100%
+		margin-bottom: 60px
+		&::-webkit-scrollbar
+    	display: none
+		@media only screen and (max-width: 600px)
+			min-width: 800px
+			padding: 0 60px
+		&:after
+			content: ""
+			height: 2px
+			width: 100%
+			background: linear-gradient(270deg, #FFFFFF 0%, #1AE69B 16.67%, #1AE69B 82.81%, #FF0000 100%)
+			position: absolute
+			bottom: 0
+			@media only screen and (max-width: 600px)
+				width: calc(100% - 120px)
+		&__wrap
+			@media only screen and (max-width: 600px)
+				width: calc(100% + 120px)
+				margin-left: -60px
+				overflow-x: scroll
+		&__item
+			display: flex
+			flex-direction: column
+			&__logo
+				margin-bottom: 16px
+			&__year
+				font-size: 14px
+				color: white
+				margin-bottom: 28px
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.hmb
+	cursor: url('/img/cursor9.png'), auto
+	width: 100%
+	background: #3E4945
+	overflow-x: hidden
+	&__wrap
+		padding: 80px 40px 100px
+		max-width: 1400px
+		margin: 0 auto
+		display: flex
+		flex-direction: column
+		
+	&__content
+		display: flex
+		z-index: 3
+		// margin: 0 auto
+		width: 100%
+		@media only screen and (max-width: 800px)
+			flex-direction: column
+		&__gallery
+			margin-top: 200px
+			// background: rgba(0,0,0,0.1)
+			flex: 2 1 auto
+			margin-right: 48px
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			grid-gap: 20px
+			// grid-auto-columns: minmax(100px, 200px)
+			align-self: flex-start
+			@media only screen and (max-width: 800px)
+				margin-top: 0
+				order: 2
+			&__imglink
+				min-width: 100px
+				height: 100px
+				background: rgba(255,255,255,0.2)
+				background-size: cover
+		&__text
+			flex: 1 1 auto
+			margin-bottom: 32px
+			// background: rgba(0,0,0,0.1)
+			p
+				max-width: 700px
+				font-size: 26px
+				line-height: 150%
+				font-family: 'Roboto Mono', monospace
+				color: white
+				@media only screen and (max-width: 1000px)
+					font-size: 22px
+				@media only screen and (max-width: 600px)
+					font-size: 18px
+		
+	&__hero
+		position: relative
+		display: flex
+		flex-direction: column
+		&__homegif
+			z-index: 2
+			width: 100%
+			max-width: 320px
+			margin: 0 auto
+			margin-top: 200px
+			image-rendering: pixelated
+			@media only screen and (max-width: 600px)
+				margin-top: 140px
+		&__title
+			z-index: 2
+			font-family: 'Roboto Mono', monospace
+			font-weight: 700
+			text-align: center
+			color: white
+			font-size: 116px
+			text-transform: uppercase
+			margin: 0 0 32px 0
+			@media only screen and (max-width: 800px)
+				font-size: calc(-10px + 16vw)
+		&__back
+			position: absolute
+			z-index: 1
+			width: 100%
+			height: 580px
+			background-position: center
+			background-size: cover
+			background-image: url(https://cdn.glitch.com/78a63c0e-9d0d-41d5-84ad-1c4a47e813e0%2Fmck.jpg)
+			@media only screen and (max-width: 600px)
+				height: 480px
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.site-maps
+	background: #3717BB
+	width: 100%
+	padding: 40px
+	height: 100vh
+	@media only screen and (max-width: 600px)
+		padding: 20px
+		height: auto
+	&__verticalline
+		bottom: 0
+		left: 12px
+		width: 2px
+		height: 24px
+		background: white
+		position: absolute
+	&__horizontalline
+		margin: 0 20px 20px
+		width: 24px
+		height: 2px
+		background: white
+	&__wrap
+		position: relative
+		height: 100%
+		border: 2px solid white
+		background-image: url(https://cdn.glitch.com/78a63c0e-9d0d-41d5-84ad-1c4a47e813e0%2Ftile-grid.png)
+		background-size: 40px
+		color: white
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__map
+		padding: 40px
+		img
+			max-width: 500px
+			width: 100%
+	&__info
+		border-top: 2px solid white
+		border-right: 2px solid white
+		max-width: 675px
+		background: #3717BB
+		&__top
+			border-bottom: 2px solid white
+			display: flex
+			&_left
+				flex: 5 1 auto
+				border-right: 2px solid white
+				padding: 10px 30px
+			&_right
+				flex: 1 1 auto
+				padding: 10px 30px
+		&__bottom
+			font-size: 18px
+			line-height: 160%
+			padding: 10px 32px 20px
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.gf-king
+	cursor: url('/img/cursor10.png'), auto
+	&__gifs
+		&__item
+			margin: 10px
+	&__crown
+		top: -65px
+		left: -140px
+		@media only screen and (max-width: 600px)
+			display: none
+	&__title
+		top: 0
+		left: 170px
+		@media only screen and (max-width: 600px)
+			position: inherit !important
+			left: 0
+			width: 100%
+	&__new
+		width: 100px
+		top: 0
+		right: 0
+		transform: rotate(35deg)
+	&__wrap
+		margin: 0 auto
+		// max-width: 1200px
+		padding: 40px 40px
+	&__head
+		max-width: 700px
+		height: 170px
+		position: relative
+		margin-bottom: 30px
+		@media only screen and (max-width: 600px)
+			height: auto
+		&__img
+			position: absolute
+	&__text
+		p
+			font-style: italic
+			line-height: 1.5
+			font-size: 18px
+			max-width: 400px
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.tp
+	background: #222
+	padding: 40px 0
+	&__wrap
+		border: 4px solid red
+		background: white
+		padding: 20px 40px 30px
+		max-width: 600px
+		margin: 0 auto
+		p
+			font-size: 12px
+			line-height: 1.5
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.btg
+	background: #DBDBDB
+	padding: 40px
+	@media only screen and (max-width: 600px)
+		padding: 32px 24px
+	&__hr
+		margin: 10px 0 20px
+		max-width: 200px
+		opacity: 0.4
+	&__volume
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			border-radius: 200px
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 67%, rgba(0, 0, 0, 0.3) 100%)
+	&__invert-volume
+		&:before
+			z-index: 0
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			border-radius: 200px
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%)
+	&__glow
+		box-shadow: inset 0 -10px 20px rgba(255,255,255,0.6)
+	&__flare
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 50%
+			border-radius: 100px 100px 0 0
+			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.56) 100%)
+	&__flare2
+		&:after
+			content: ""
+			position: absolute
+			top: 22%
+			left: 50%
+			transform: translate(-50%, -50%)
+			display: block
+			width: 90%
+			height: 60%
+			border-radius: 200px
+			background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%)
+	&__flare3
+		&:after
+			content: ""
+			position: absolute
+			top: 25%
+			left: 50%
+			transform: translate(-50%, -50%)
+			display: block
+			width: 80%
+			height: 40%
+			border-radius: 200px
+			background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 100%)
+	&__btn
+		margin: 0 auto
+		border: none
+		overflow: hidden
+		position: relative
+		cursor: pointer
+		background: #2400FF
+		padding: 28px 40px
+		border-radius: 100px
+		font-size: 40px
+		text-transform: uppercase
+		&:focus
+			outline: none
+		span
+			color: white
+			z-index: 999
+			position: relative
+	&__wrap
+		background: white
+		box-shadow: 0px 11px 44px rgba(0, 0, 0, 0.25)
+		margin: 0 auto
+		border-radius: 20px
+		max-width: 800px
+		padding: 32px
+		h1
+			margin-top: 0
+		input
+			margin-right: 8px
+			margin-bottom: 16px
+	&__content
+		display: flex
+		@media only screen and (max-width: 600px)
+			flex-direction: column-reverse
+	&__stngs
+		flex: 1 1 auto
+	&__btn-view
+		padding-bottom: 40px
+		position relative
+		flex: 1 1 auto
+		display: flex
+		align-items: center
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.end-slide
+	width: 100%
+	height: 100vh
+	h1
+		font-size: 60px
+
+///////////////////////////////////////////////////////////
+//// ----------------- NEXT SECTION ----------------- /////
+///////////////////////////////////////////////////////////
+
+.test-slide
+    height: 400px	
